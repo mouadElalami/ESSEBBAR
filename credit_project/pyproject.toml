@@ -1,0 +1,17 @@
+[project]
+name = "credit-risk"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = ["pandas", "scikit-learn", "joblib"]
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

@@ -1,0 +1,15 @@
+import os
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+
+def run():
+    d=pd.read_csv("credit.csv")
+    d=d.dropna()
+    X=d.drop("default",axis=1)
+    y=d["default"]
+    m=RandomForestClassifier()
+    m.fit(X,y)
+    print(m.score(X,y))
+    return m
+
+model=run()
